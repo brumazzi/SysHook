@@ -74,9 +74,9 @@ int main(int argc, const char **argv){
 					bzero(KEY, 256);
 					if(vec.size() == 0)
 						continue;
-					string comm = "printf ";
+					string comm = "printf '";
 					comm += vec[0];
-					comm += " | xsel -b";
+					comm += "' | xsel -b";
 					system(comm.c_str());
 
 					char *del_bf = (char *) vec[0];
